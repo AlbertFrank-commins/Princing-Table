@@ -1,0 +1,134 @@
+/* 1. Reset básico para controlar márgenes y anchos */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. Cuerpo: fondo gris claro y centrado de la página */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  color: #333333;
+  padding: 40px 20px;
+}
+
+/* Título */
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #f4b250;
+}
+
+/* 3. Contenedor de las tarjetas con Flexbox */
+.contenedor-planes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Si la pantalla es pequeña, bajan a otra fila */
+}
+
+/* 4. Estilo base de cada tarjeta */
+.tarjeta {
+  background-color: #ffffff;
+  width: 270px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Corta los bordes para respetar las esquinas redondeadas */
+  text-align: center;
+}
+
+/* Tarjeta central destacada: más grande para llamar la atención */
+.tarjeta.destacada {
+  transform: scale(1.05);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* 5. Cabecera de la tarjeta */
+.tarjeta-cabecera {
+  padding: 24px 15px;
+  color: #ffffff;
+}
+
+.tarjeta-cabecera h2 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.tarjeta-cabecera .precio {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.tarjeta-cabecera .precio span {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+/* Colores de fondo para cada plan */
+.tarjeta-naranja .tarjeta-cabecera {
+  background-color: #f39c12;
+}
+
+.tarjeta-verde .tarjeta-cabecera {
+  background-color: #16a085;
+}
+
+.tarjeta-rosa .tarjeta-cabecera {
+  background-color: #e84393;
+}
+
+/* 6. Lista de características */
+.tarjeta-cuerpo {
+  padding: 20px;
+}
+
+.tarjeta-cuerpo ul {
+  list-style: none; /* Quita los puntos negros por defecto */
+  margin-bottom: 20px;
+}
+
+.tarjeta-cuerpo li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eeeeee;
+  font-size: 14px;
+}
+
+/* Colores del texto según si está incluido o no */
+.tarjeta-cuerpo li.si {
+  color: #27ae60; /* Verde */
+}
+
+.tarjeta-cuerpo li.no {
+  color: #c0392b; /* Rojo */
+}
+
+/* 7. Botones de acción */
+.tarjeta-cuerpo button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+/* Color de botón a juego con la cabecera */
+.tarjeta-naranja button {
+  background-color: #f39c12;
+}
+
+.tarjeta-verde button {
+  background-color: #16a085;
+}
+
+.tarjeta-rosa button {
+  background-color: #e84393;
+}
+
+.tarjeta-cuerpo button:hover {
+  opacity: 0.85; /* Ligero cambio al pasar el mouse */
+}
